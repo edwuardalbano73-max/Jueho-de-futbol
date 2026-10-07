@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Football Game</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="menu" class="menu">
+
+    <div class="logo">
+      <div class="ball">⚽</div>
+      <h1>FOOTBALL</h1>
+      <span>GAME</span>
+    </div>
+
+    <div class="menu-card">
+
+      <h2>Partido rápido</h2>
+
+      <div class="team-preview">
+
+        <div class="team">
+          <div class="crest blue">F</div>
+          <strong>FALCONS</strong>
+        </div>
+
+        <div class="vs">VS</div>
+
+        <div class="team">
+          <div class="crest red">R</div>
+          <strong>ROYALS</strong>
+        </div>
+
+      </div>
+
+      <button id="playButton" class="play-button">
+        ⚽ JUGAR
+      </button>
+
+      <p class="controls-info">
+        PC: WASD / Flechas · Espacio: tiro · E: pase
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div id="game" class="game hidden">
+
+    <div class="topbar">
+
+      <div class="team-score">
+        <span class="small-team blue-text">FALCONS</span>
+        <strong id="homeScore">0</strong>
+      </div>
+
+      <div class="clock">
+        <span id="timer">02:00</span>
+        <small>PARTIDO</small>
+      </div>
+
+      <div class="team-score">
+        <strong id="awayScore">0</strong>
+        <span class="small-team red-text">ROYALS</span>
+      </div>
+
+    </div>
+
+
+    <canvas id="gameCanvas"></canvas>
+
+
+    <div class="mobile-controls">
+
+      <div class="joystick-area">
+
+        <div id="joystick" class="joystick">
+          <div id="joystickKnob"></div>
+        </div>
+
+      </div>
+
+      <div class="action-buttons">
+
+        <button id="passButton" class="control pass">
+          PASS
+        </button>
+
+        <button id="shootButton" class="control shoot">
+          ⚽
+        </button>
+
+        <button id="sprintButton" class="control sprint">
+          ⚡
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div id="goalMessage" class="goal-message hidden">
+      <span>⚽</span>
+      ¡GOOOOOOL!
+    </div>
+
+
+    <button id="pauseButton" class="pause-button">
+      II
+    </button>
+
+  </div>
+
+
+  <div id="resultScreen" class="result-screen hidden">
+
+    <div class="result-card">
+
+      <div class="result-ball">⚽</div>
+
+      <h1 id="resultTitle">FINAL</h1>
+
+      <div class="final-score">
+        <span>FALCONS</span>
+        <strong>
+          <span id="finalHome">0</span>
+          -
+          <span id="finalAway">0</span>
+        </strong>
+        <span>ROYALS</span>
+      </div>
+
+      <button id="againButton" class="play-button">
+        🔄 JUGAR OTRA VEZ
+      </button>
+
+      <button id="menuButton" class="secondary-button">
+        MENÚ
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="game.js"></script>
+
+</body>
+</html>
